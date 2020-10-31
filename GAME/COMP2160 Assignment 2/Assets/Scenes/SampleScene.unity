@@ -245,6 +245,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 382246061}
   m_CullTransparentMesh: 0
+--- !u!1 &498199625
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 498199627}
+  - component: {fileID: 498199626}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &498199626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498199625}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31a9873e3e7e0d14fb596ffe423edf3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &498199627
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498199625}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 519.3053, y: 296.81647, z: -52.59497}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &639587103
 GameObject:
   m_ObjectHideFlags: 0
@@ -624,6 +667,7 @@ GameObject:
   - component: {fileID: 1067452802}
   - component: {fileID: 1067452801}
   - component: {fileID: 1067452805}
+  - component: {fileID: 1067452806}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -724,6 +768,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27d13b77ef4d11b40ab8a6b40fcaabc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1067452806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1067452800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bae1764587fc0c43a25f0e2ebf6fc96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   timer: {fileID: 1100601146}
 --- !u!1 &1100601144
 GameObject:
@@ -794,7 +850,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Time: 00 : 00 : 00'
+  m_Text: 'Time:'
 --- !u!222 &1100601147
 CanvasRenderer:
   m_ObjectHideFlags: 0
