@@ -5,6 +5,7 @@ using UnityEngine;
 public class Drive : MonoBehaviour
 {
     private float driveSpeed;
+    public float speed;
     public float rotateSpeed;
     private float acceleration = 100.0f;
     private float brake = 10.0f;
@@ -25,6 +26,7 @@ public class Drive : MonoBehaviour
         }
       }
       driveSpeed = Mathf.Clamp(driveSpeed, -maxSpeed, maxSpeed); 
+      speed = driveSpeed;
       Vector3 velocity = Vector3.forward * driveSpeed;
       transform.Translate(velocity * Time.deltaTime);  
 
