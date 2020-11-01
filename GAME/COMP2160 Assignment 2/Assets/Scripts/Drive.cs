@@ -30,8 +30,11 @@ public class Drive : MonoBehaviour
       Vector3 velocity = Vector3.forward * driveSpeed;
       transform.Translate(velocity * Time.deltaTime);  
 
-      float turn = Input.GetAxis("Horizontal");
-      transform.Rotate (0, turn*rotateSpeed*Time.deltaTime, 0);
+      if(forward == 0)
+      {
+        float turn = Input.GetAxis("Horizontal");
+        transform.Rotate (0, turn*rotateSpeed*Time.deltaTime, 0);
+      }
     } 
 }
 
