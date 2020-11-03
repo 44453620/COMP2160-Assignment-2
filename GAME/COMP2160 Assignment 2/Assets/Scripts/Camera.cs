@@ -18,7 +18,7 @@ public class Camera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float speed = GameObject.Find("Car").GetComponent<Drive>().speed;
+        float speed = GameObject.Find("Car").GetComponent<Drive>().driveSpeed;
 
         Ray ray = new Ray(target.position, Vector3.down);
         RaycastHit hit;
