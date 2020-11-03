@@ -6,7 +6,6 @@ public class Camera : MonoBehaviour
 {
     public Transform target;
     public LayerMask layer;
-    public GameObject camera;
 
     private  float timePressed = 0;
 
@@ -37,7 +36,7 @@ public class Camera : MonoBehaviour
             speed = 0;
         }
 
-        camera.transform.position = transform.TransformPoint(0,1, -2-speed);
+        GetComponent<Camera>().transform.position = transform.TransformPoint(0,1, -2-speed);
 
         float turning = Input.GetAxis("Horizontal") * Time.deltaTime * GameObject.Find("Car").GetComponent<Drive>().rotateSpeed;
         float savedTime = 0;
@@ -57,6 +56,5 @@ public class Camera : MonoBehaviour
         {
         transform.Rotate(0, turning, 0);
         }
-        Debug.Log(savedTime);
     }
 }
