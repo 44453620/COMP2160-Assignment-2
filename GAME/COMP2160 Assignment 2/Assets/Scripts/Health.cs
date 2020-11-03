@@ -7,10 +7,9 @@ public class Health : MonoBehaviour
     public static int maxHealth = 100;
     public GameObject Smokes;
     public GameObject Explosion;
-
     private int health;
-    
     private float lifeTime = 0f;
+    float velocity;
 
     public int getHealth
     {
@@ -25,9 +24,11 @@ public class Health : MonoBehaviour
         health = hp;
     }
 
-    public void reduceHealth(int setDamage)
+    public void reduceHealth(float dmgSpeed)
     {
-        health -= setDamage;
+        int someInt = (int)System.Math.Round(dmgSpeed); 
+        health -= someInt + 10;
+        //health-=25;
     }
 
     public void gainHealth(int setIncrement)
@@ -41,6 +42,7 @@ public class Health : MonoBehaviour
         Smokes.SetActive(false);
         Explosion.SetActive(false);
         setHealth(maxHealth);
+        velocity = GameObject.Find("Car").GetComponent<Drive>().speed;
     }
 
     // Update is called once per frame
@@ -76,7 +78,7 @@ public class Health : MonoBehaviour
     {
         if (obstruction.gameObject.tag == "Danger")
         {
-            reduceHealth(25);
+            reduceHealth(velocity);
         }
         
         if (obstruction.gameObject.tag == "Checkpoint")

@@ -26,9 +26,9 @@ public class Drive : MonoBehaviour
         }
       }
       driveSpeed = Mathf.Clamp(driveSpeed, -maxSpeed, maxSpeed); 
-      speed = driveSpeed;
       Vector3 velocity = Vector3.forward * driveSpeed;
       transform.Translate(velocity * Time.deltaTime);  
+      speed = driveSpeed;
 
       float turn = Input.GetAxis("Horizontal");
       transform.Rotate (0, turn*rotateSpeed*Time.deltaTime, 0);
