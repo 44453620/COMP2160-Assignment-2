@@ -248,8 +248,8 @@
     <Reference Include="UnityEditor">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.11f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/Noel Martin/Documents/GitHub/COMP2160-Assignment-2/GAME/COMP2160 Assignment 2/Assets/UnityEngine.UI.dll</HintPath>
+    <Reference Include="renamedUnityEngine.UI">
+      <HintPath>C:/Users/Noel Martin/Documents/GitHub/COMP2160-Assignment-2/GAME/COMP2160 Assignment 2/Assets/renamedUnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.11f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
